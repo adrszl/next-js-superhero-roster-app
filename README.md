@@ -1,2 +1,4 @@
-# next-js-superhero-roster-app
-Superhero Roster Web Application that allows users to browse, filter, and view details about superheroes.
+# Next.js Superhero Roster App
+
+### Superhero API key is needed, get one here: https://superheroapi.com/
+### Then, as usual `npm i` and `npm run dev`
