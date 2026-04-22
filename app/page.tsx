@@ -2,7 +2,7 @@ import { CharactersList } from '@/components/CharactersList';
 import { LocalCharacter } from '@/types/character';
 
 async function getLocalCharacters(): Promise<LocalCharacter[]> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/characters`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/characters`, {
     cache: 'no-store',
   });
 
