@@ -55,16 +55,18 @@ export const CharactersList = ({ characters }: Props) => {
                 <p>Weakness: {character.weakness}</p>
               )}
               <ShowMoreButton heroName={character.name} />
-              {selectedCharacterDetails?.name === character.name && selectedCharacterDetails.image?.url ? (
-                <div style={{ marginTop: '2rem' }}>
-                  <Image
-                    src={selectedCharacterDetails.image.url.replace('httpss', 'https')}
-                    width={250}
-                    height={250}
-                    alt={`${selectedCharacterDetails.name} image`}
-                  />
-                </div>
-              ) : null}
+              {selectedCharacterDetails &&
+                selectedCharacterDetails.name === character.name &&
+                selectedCharacterDetails.image?.url && (
+                  <div style={{ marginTop: '2rem' }}>
+                    <Image
+                      src={selectedCharacterDetails.image.url.replace('httpss', 'https')}
+                      width={250}
+                      height={250}
+                      alt={`${selectedCharacterDetails.name} image`}
+                    />
+                  </div>
+                )}
             </div>
           </Grid>
         ))}
